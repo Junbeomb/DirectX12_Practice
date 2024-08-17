@@ -95,6 +95,9 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 //
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
+    DWORD dwStyle = WS_OVERLAPPED | WS_CAPTION | WS_MINIMIZEBOX | WS_SYSMENU |
+        WS_BORDER;
+    RECT rc = { 0, 0, 640, 480 };
     AdjustWindowRect(&rc, dwStyle, FALSE);
 
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
